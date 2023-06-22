@@ -1,0 +1,32 @@
+[
+    {
+      "imageSrc": "/images/city_images/gothenburg.png",
+      "cityName": "Göteborg",
+      "barCount": "3"
+    },
+    {
+      "imageSrc": "/images/city_images/stockholm.png",
+      "cityName": "Stockholm",
+      "barCount": "3"
+    },
+    {
+        "imageSrc": "/images/city_images/malmö.png",
+        "cityName": "Malmö",
+        "barCount": "10"
+      },
+      {
+        "imageSrc": "/images/city_images/lund.png",
+        "cityName": "Lund",
+        "barCount": "3"
+      },
+      {
+        "imageSrc": "/images/city_images/uppsala.png",
+        "cityName": "Uppsala",
+        "barCount": "12"
+      },
+      {
+        "imageSrc": "/images/city_images/jönköping.png",
+        "cityName": "Jönköping",
+        "barCount": "0"
+      }
+  ]
