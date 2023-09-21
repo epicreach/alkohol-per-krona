@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+/* For Webkit browsers (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+  width: 13px; /* Adjust the width as needed */
+}
+
+::-webkit-scrollbar-track {
+  background: #333; /* Set the background color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #666; /* Set the color of the scrollbar thumb */
+}
+
+

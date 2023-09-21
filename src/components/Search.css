@@ -1,0 +1,37 @@
+.search-container {
+    display: flex;
+    align-items: center;
+   margin-top: 2rem;
+   
+  }
+  
+  .search-input {
+    padding: 8px;
+    border: 2px solid #242736; 
+    border-radius: 20px;
+    font-size: 1.5rem;
+    width:40vw;
+    background-color: #33374b;
+    
+
+  }
+  
+  .search-reset {
+    margin-left: 0.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    background-color: #f6a230;
+    width:3rem;
+    height:3rem;
+    border-radius: 4px
+  }
+  
+  .search-reset img {
+    width: 2rem;
+    height: 2rem;
+    
+  }
+  

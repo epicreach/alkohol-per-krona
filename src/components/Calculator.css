@@ -1,0 +1,164 @@
+/* Colors */
+:root {
+  --dark-blue: #242736;
+  --light-blue: #33374b;
+  --orange: #f6a230;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--light-blue);
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.calculator-wrapper {
+  flex: 1; /* Take up remaining space */
+  display: inline-block;
+  justify-content: flex-end; /* Align to the right */
+  align-items: center;
+  margin-left: 5rem;
+  
+  
+}
+
+#alcCalc{
+  width:60%;
+  transform: translate(20%,20%);
+}
+.final-result{
+  text-align: center;
+  color:#f6a230;
+  font-size:4rem;
+  margin-top: 2rem;
+}
+.title {
+  color: var(--light-blue);
+  text-align: center;
+  background-color: var(--orange);
+  font-weight: 800;
+  border-radius: 10px;
+  margin-bottom: -50px;
+  max-width: 100%;
+  font-size: 2.5rem;
+  padding: 0.5rem 1rem;
+  width:60%;
+  margin-top: 2rem;
+  transform: translateX(20%);
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+  color: var(--orange);
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button[type="submit"] {
+  background-color: var(--orange);
+  color: var(--light-blue);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+button[type="submit"]:hover {
+  background-color: #f6b730;
+}
+
+.result {
+  margin-top: 10px;
+  font-weight: bold;
+  
+}
+
+.result-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-container {
+  padding: 10px;
+  background-color: #242736;
+  border: 3px solid var(--orange);
+  border-radius: 8px;
+  width: 600px; /* Adjust the width as needed */
+  height: 30vw; /* Adjust the height as needed */
+  margin-left: 10vw;
+  margin-top: -15vw;
+}
+.result-box {
+  padding: 10px;
+}
+
+
+#APKresultat {
+  font-size: 2.5rem;
+  background-color: var(--orange);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  color: var(--dark-blue);
+  text-align: center;
+}
+
+/* For screen sizes larger than 768px */
+@media screen and (min-width: 768px) {
+  .calculator-wrapper {
+    justify-content: flex-end;
+  }
+
+  .result-wrapper {
+    justify-content: flex-start;
+  }
+}
+.apk-progress {
+  width: 100%;
+  height: 50px;
+  margin-top: 100px;
+  background-color: #ccc;
+  border-radius: 25px;
+}
+
+.progress-indicators {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.progress-indicator {
+  flex: 1;
+  text-align: center;
+  color: var(--orange);
+  font-size: 24px;
+}
+
+.apk-progress::-webkit-progress-bar {
+  background-color: #7b86a1;
+  border-radius: 10px;
+}
+
+.apk-progress::-webkit-progress-value {
+  background-color: var(--orange);
+  border-radius: 10px;
+}
+
+.apk-progress::-moz-progress-bar {
+  background-color: var(--orange);
+  border-radius: 25px;
+}

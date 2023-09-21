@@ -61,7 +61,14 @@
   }
 
   
-  
+  .no-result{
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: #f6a230;
+    width:40vw;
+    margin-left: 13rem;
+    margin-top: 2rem;
+  }
   
   @media screen and (max-width: 1320px) {
     .cards-container {

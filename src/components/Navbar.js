@@ -54,7 +54,7 @@ function Navbar() {
             {/*APK Kalkyl*/}
             <li className="nav-item">
               <Link
-                to="/APKKalkyl"
+                to="/APKkalkyl"
                 className="nav-links"
                 onClick={closeMobileMenu}
               >
