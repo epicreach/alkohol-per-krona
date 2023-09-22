@@ -6,24 +6,26 @@ function Calculator() {
   const [alcoholPercentage, setAlcoholPercentage] = useState("");
   const [price, setPrice] = useState("");
   const [apkResult, setApkResult] = useState("");
+  const [apkStatus, setApkStatus] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const apk = ((alcoholPercentage / price) * volume) / 100;
     setApkResult(apk.toFixed(2));
+    displayResult(apk); 
   };
-  let apkstatus = "";
+
   const displayResult = (apknr) => {
-    if (apknr === "0") {
-      apkstatus = "Bedrägligt Dåligt";
+    if (apknr === 0) {
+      setApkStatus("Bedrägligt Dåligt");
     } else if (apknr <= 1) {
-      apkstatus = "Dåligt";
+      setApkStatus("Dåligt");
     } else if (apknr <= 2) {
-      apkstatus = "Accepterbart";
+      setApkStatus("Accepterbart");
     } else if (apknr <= 3) {
-      apkstatus = "Riktigt Bra";
+      setApkStatus("Riktigt Bra");
     } else {
-      apkstatus = "100% Värd";
+      setApkStatus("100% Värd");
     }
   };
 
@@ -34,14 +36,16 @@ function Calculator() {
           <div className="result-container">
             <div id="result" className="result-box">
               <h1 id="APKresultat">APK Resultat</h1>
-              <h1> {apkstatus}</h1>
+             
               <p className="final-result">{apkResult}</p>
+              <h1 id="APKstatus"> {apkStatus}</h1>
               <progress
                 className="apk-progress"
                 value={apkResult}
                 max={3}
                 min={0}
               />
+              
             </div>
           </div>
         </div>

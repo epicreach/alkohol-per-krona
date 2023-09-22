@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'jostregular';
-  src: url('D:/APK/alkohol-per-krona/public/fonts/jost-variablefont_wght-webfont.woff') format('woff2'),
-       url('D:/APK/alkohol-per-krona/public/fonts/jost-italic-variablefont_wght-webfont.woff') format('woff');
+  src: url('C:\Users\luqas\Documents\GitHub\alkohol-per-krona\public\fonts\jost-italic-variablefont_wght-webfont.woff') format('woff2'),
+       url('C:\Users\luqas\Documents\GitHub\alkohol-per-krona\public\fonts\jost-italic-variablefont_wght-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 
@@ -19,7 +19,18 @@
     height: 60px;
     
 }
+#textpopcontainer{
+  margin-left:20rem;
+  width:25rem;
+}
+#textpopup{
 
+  font-size: 1.2rem;
+  text-align: center;
+  color: #f6a230;
+  transform: rotate(-10deg);
+  font-weight: 400;
+}
 
 .navbar {
   background: #242736 ;

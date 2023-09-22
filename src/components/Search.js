@@ -24,9 +24,11 @@ const Search = ({ onSearch, onReset }) => {
         onChange={handleInputChange}
         className="search-input"
       />
-      <button type="button" onClick={handleReset} className="search-reset">
-        <img src="./images/search_icon.png" alt="Rensa" />
-      </button>
+      <div id="imgcontainer" >
+        <button type="button" onClick={handleReset} className="search-reset">
+          <img src="./images/search_icon.png" alt="Rensa" />
+        </button>
+      </div>
     </form>
   );
 };
