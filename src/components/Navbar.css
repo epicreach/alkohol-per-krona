@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'jostregular';
-  src: url('C:\Users\luqas\Documents\GitHub\alkohol-per-krona\public\fonts\jost-italic-variablefont_wght-webfont.woff') format('woff2'),
-       url('C:\Users\luqas\Documents\GitHub\alkohol-per-krona\public\fonts\jost-italic-variablefont_wght-webfont.woff') format('woff');
+  src: url('../../public/fonts/jost-variablefont_wght-webfont.woff2') format('woff2'),
+       url('../../public/fonts/jost-variablefont_wght-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 
