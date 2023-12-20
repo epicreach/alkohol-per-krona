@@ -23,15 +23,17 @@ function Navbar() {
     }
   };
 
-const stringList = ["\"Varför dricka ansvarsfullt när du kan supa ekonomiskt?\"",
-"\"Borta bra men helt väck bäst\"",
-"\"Jag behöver inte ha kul för att ha alkohol\"",
-"\"Man kan inte dränka demonerna i sprit för de kan simma\"",
-"\"I can drink a whole hennessey fifth, some call it a problem I call it a gift\""];
+  const stringList = [
+    '"Varför dricka ansvarsfullt när du kan supa ekonomiskt?"',
+    '"Borta bra men helt väck bäst"',
+    '"Jag behöver inte ha kul för att ha alkohol"',
+    '"Man kan inte dränka demonerna i sprit för de kan simma"',
+    '"I can drink a whole hennessey fifth, some call it a problem I call it a gift"',
+  ];
 
-const randomIndex = Math.floor(Math.random() * stringList.length);
+  const randomIndex = Math.floor(Math.random() * stringList.length);
 
-const textpopuptext = stringList[randomIndex];
+  const textpopuptext = stringList[randomIndex];
   useEffect(() => {
     showButton();
   }, []);
@@ -42,11 +44,10 @@ const textpopuptext = stringList[randomIndex];
     <>
       <nav className="navbar">
         <div className="navbar-container">
-          
           <Link to="/" className="navbar-logo">
             <img className="apkLogo" src="/images/APK_LOGO.png" alt="APK" />
           </Link>
-          
+
           <div
             className={click ? "menu-icon active" : "menu-icon"}
             onClick={handleClick}
@@ -60,7 +61,7 @@ const textpopuptext = stringList[randomIndex];
             />
           </div>
           <div id="textpopcontainer">
-          <h1 id="textpopup"> {textpopuptext} </h1>
+            <h1 id="textpopup"> {textpopuptext} </h1>
           </div>
           {/*Navbar Items*/}
           <ul className={click ? "nav-menu active" : "nav-menu"}>
