@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import "./HeroSection.css";
-import "../App.css";
+import "../styles/HeroSection.css";
+import "../styles/App.css";
 import Cards from "./Cards";
 import Search from "./Search";
 

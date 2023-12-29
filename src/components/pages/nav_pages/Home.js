@@ -1,4 +1,4 @@
-import "../../../App.css";
+import "../../../styles/App.css";
 import HeroSection from "../../HeroSection";
 import React from "react";
 

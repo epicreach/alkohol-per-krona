@@ -1,0 +1,94 @@
+.hero-container{
+    background-color: #33374b;
+    height: 100vw;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    object-fit: contain;
+    
+
+}
+
+.hero-container > h1 {
+    font-family: 'Jost', sans-serif;
+    font-weight: 800;
+    color: #f6a230;
+    font-size: 6rem;
+    margin-top: 0px;
+    width:600px;
+    display: flex;
+    display: inline-block;
+    text-align: center;
+    line-height: 1.25;
+    @media screen and (max-width: 1160px) {
+      font-size: 4rem ;
+     
+  
+      }
+    @media screen and (max-width: 700px) {
+    font-size: 2.4rem ;
+    
+   
+
+    }
+    
+    
+  }
+  
+  .hero-container > h2 {
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    margin-top: 8px;
+    color: #f6a230;
+    font-size: 2rem;
+    
+      text-align: center;
+      @media screen and (max-width: 1160px) {
+        font-size: 1.5rem ;
+       
+    
+        }
+  }
+
+
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    
+    column-gap: 70px;
+    
+  }
+
+  
+  .no-result{
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: #f6a230;
+    width:40vw;
+    margin-left: 13rem;
+    margin-top: 2rem;
+  }
+  
+  @media screen and (max-width: 1320px) {
+    .cards-container {
+      justify-content: center;
+      column-gap: 40px;
+    }
+
+    .hero-container > h1 {
+      width:600px;
+    }
+
+  }
+
+
+
+  @media screen and (max-width: 1000px) {
+    .cards-container{
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+
+  

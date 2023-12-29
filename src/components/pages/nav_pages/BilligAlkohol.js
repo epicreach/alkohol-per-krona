@@ -1,10 +1,10 @@
 // ProductList.js
 import React from "react";
-
+import ProductList from "../../ProductList";
 function BilligAlkohol() {
   return (
     <div>
-      <p>Hello, World</p>
+      <ProductList />
     </div>
   );
 }
