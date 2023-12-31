@@ -1,7 +1,11 @@
 import "../styles/ProductList.css";
 import React from "react";
 import products from "../data/products.json";
-import { useTable, useSortBy, usePagination } from "react-table";
+import { useTable, useSortBy, usePagination, useFilters } from "react-table";
+import { ColumnFilter } from "./ColumnFilter";
+import { TypeFilter } from "./TypeFilter";
+import { SubTypeFilter } from "./SubTypeFilter";
+import { VolumeFilter } from "./VolumeFilter";
 
 function ProductList() {
   const data = React.useMemo(() => products, []);
@@ -11,27 +15,29 @@ function ProductList() {
       {
         Header: "APK",
         accessor: "alkoholPerKrona",
-        width: 100,
+        maxWidth: 80,
       },
       {
         Header: "Namn",
         accessor: "productNameBold",
         width: 250,
+        maxWidth: 500,
       },
       {
         Header: "Typ",
         accessor: "categoryLevel1",
-        width: 140,
+        maxWidth: 100,
       },
       {
         Header: "Underkategori",
         accessor: "categoryLevel2",
-        width: 180,
+        maxWidth: 200,
       },
       {
         Header: "Alkoholhalt",
         accessor: "alcoholPercentage",
-        width: 60,
+        width: 120,
+        maxWidth: 120,
         Cell: ({ cell: { value } }) => (
           <div style={{ display: "flex", alignItems: "center" }}>{value}%</div>
         ),
@@ -39,7 +45,7 @@ function ProductList() {
       {
         Header: "Volym",
         accessor: "volume",
-        width: 70,
+        maxWidth: 90,
         Cell: ({ cell: { value } }) => (
           <div style={{ display: "flex", alignItems: "center" }}>
             {value} ml
@@ -49,12 +55,21 @@ function ProductList() {
       {
         Header: "Pris",
         accessor: "price",
-        width: 60,
+        maxWidth: 60,
         Cell: ({ cell: { value } }) => (
           <div style={{ display: "flex", alignItems: "center" }}>{value}kr</div>
         ),
       },
     ],
+    []
+  );
+  const defaultColumn = React.useMemo(
+    () => ({
+      Filter: ColumnFilter,
+      TypeFilter: TypeFilter,
+      SubTypeFilter: SubTypeFilter,
+      VolumeFilter: VolumeFilter,
+    }),
     []
   );
 
@@ -73,7 +88,12 @@ function ProductList() {
     setPageSize,
     state,
     prepareRow,
-  } = useTable({ columns, data }, useSortBy, usePagination);
+  } = useTable(
+    { columns, data, defaultColumn },
+    useFilters,
+    useSortBy,
+    usePagination
+  );
 
   const { pageIndex, pageSize } = state;
   // Sort the first column when the component mounts
@@ -84,12 +104,12 @@ function ProductList() {
     }
   }, [headerGroups]);
   React.useEffect(() => {
-    setPageSize(20);
+    setPageSize(30);
   }, [setPageSize]);
 
   return (
     <div className="ProductList">
-      <div className="container">
+      <div className="productlistcontainer">
         <table {...getTableProps()}>
           <thead>
             {headerGroups.map((headerGroup) => (
@@ -112,9 +132,24 @@ function ProductList() {
                     }}
                   >
                     {column.render("Header")}
-                    <div>
+                    <div className="filterSearch">
                       {columnIndex === 1 && column.canFilter
                         ? column.render("Filter")
+                        : null}
+                    </div>
+                    <div>
+                      {columnIndex === 2 && column.canFilter
+                        ? column.render("TypeFilter")
+                        : null}
+                    </div>
+                    <div>
+                      {columnIndex === 3 && column.canFilter
+                        ? column.render("SubTypeFilter")
+                        : null}
+                    </div>
+                    <div>
+                      {columnIndex === 5 && column.canFilter
+                        ? column.render("VolumeFilter")
                         : null}
                     </div>
                     <span>
@@ -155,7 +190,7 @@ function ProductList() {
             value={pageSize}
             onChange={(e) => setPageSize(Number(e.target.value))}
           >
-            {[20, 50, 100].map((pageSize) => (
+            {[30, 50, 100].map((pageSize) => (
               <option key={pageSize} value={pageSize}>
                 Visa {pageSize}
               </option>

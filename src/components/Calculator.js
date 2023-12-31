@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "../styles/Calculator.css";
-
 function Calculator() {
   const [volume, setVolume] = useState("");
   const [alcoholPercentage, setAlcoholPercentage] = useState("");

@@ -1,0 +1,20 @@
+.billigalkoholcontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    align-items: center;
+}
+
+.titlecontainer{
+    width:400px;
+    margin-top: 1.5rem;
+}
+
+.tabletitle{
+    text-align: center;
+    font-size: 50px;
+    color: #33374b;
+    background-color: #f6a230;
+    border-radius: 5px;
+}

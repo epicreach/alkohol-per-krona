@@ -1,12 +1,12 @@
 .hero-container{
     background-color: #33374b;
-    height: 100vw;
+    height: auto;
     width:100%;
     display:flex;
     flex-direction: column;
     align-items: center;
     object-fit: contain;
-    
+    margin-bottom: 6rem;
 
 }
 

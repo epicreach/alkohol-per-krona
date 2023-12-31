@@ -19,12 +19,20 @@
     height: 60px;
     
 }
-#textpopcontainer{
-  margin-left:20rem;
-  width:25rem;
-}
-#textpopup{
 
+.logo-text-container{
+  display: flex;
+  flex-direction: row;
+  height: 110px;
+  gap:10px;
+  margin-top: 25px;
+  
+}
+
+
+#textpopup{
+  width:200px;
+  height: auto;
   font-size: 1.2rem;
   text-align: center;
   color: #f6a230;
@@ -52,21 +60,11 @@
   max-width: 1500px;
 
 }
-
-.navbar-logo {
-  scale: 0.27;
-  color: #fff;
-  justify-self: start;
-  left: -20rem;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 2rem;
-  display: flex;
-  align-items: center;
-  position: fixed;
-  margin-top: 1rem;
-  
+.apkLogo{
+  height:86px;
+  width:270px;
 }
+
 
 
 

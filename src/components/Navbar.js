@@ -44,10 +44,13 @@ function Navbar() {
     <>
       <nav className="navbar">
         <div className="navbar-container">
-          <Link to="/" className="navbar-logo">
-            <img className="apkLogo" src="/images/APK_LOGO.png" alt="APK" />
-          </Link>
+          <div className="logo-text-container">
+            <Link to="/" className="navbar-logo">
+              <img className="apkLogo" src="/images/APK_LOGO.png" alt="APK" />
+            </Link>
 
+            <h1 id="textpopup"> {textpopuptext} </h1>
+          </div>
           <div
             className={click ? "menu-icon active" : "menu-icon"}
             onClick={handleClick}
@@ -60,9 +63,7 @@ function Navbar() {
               className="menu-icon-img"
             />
           </div>
-          <div id="textpopcontainer">
-            <h1 id="textpopup"> {textpopuptext} </h1>
-          </div>
+
           {/*Navbar Items*/}
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             {/*APK Kalkyl*/}
